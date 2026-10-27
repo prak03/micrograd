@@ -1,6 +1,6 @@
 import random
 
-from Nueral_Network import Nueral_Network
+from Neural_Network import Neural_Network
 from Value import Value, loss_function
 from dataset import make_dataset, TARGETS
 from plot import plot_results
@@ -8,14 +8,14 @@ from plot import plot_results
 # ---- Experiment settings: change ONE at a time ----
 TARGET = "triangle"      # "sine" (smooth) or "triangle" (corners)
 ACTIVATION = "relu"      # just a label for the printout and plot; switch the
-                         # activation itself in Nueron.forward_pass as before
+                         # activation itself in Neuron.forward_pass as before
 SIZE = [4, 4, 6, 8, 10, 12, 8, 4, 1]
 EPOCHS = 400
 SEED = 0
 
 train, test = make_dataset(TARGET)
 random.seed(SEED)
-nn = Nueral_Network(SIZE)
+nn = Neural_Network(SIZE)
 
 # Loss of the best constant output (the mean target): the bar to beat.
 ys = [y for _, y in train]

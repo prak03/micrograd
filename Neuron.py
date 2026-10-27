@@ -1,6 +1,6 @@
 from Value import Value
 import random
-class Nueron:
+class Neuron:
     def __init__(self, previous_layer_size, learning_rate):
         self.weights = [Value(random.uniform(-1, 1)) for s in range(previous_layer_size)]
         self.bias = Value(0)

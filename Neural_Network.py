@@ -2,7 +2,7 @@ import random
 from Value import Value
 from Layer import Layer
 from Value import loss_function
-class Nueral_Network:
+class Neural_Network:
     def __init__(self, size,  learning_rate=0.008):
         print("lerning rate",learning_rate)
         self.learning_rate = learning_rate
@@ -30,7 +30,7 @@ class Nueral_Network:
 
     def count_dead_neurons(self, examples):
         hidden_layers = self.network[:-1]      
-        ever_on = [[False] * len(layer.nuerons) for layer in hidden_layers]
+        ever_on = [[False] * len(layer.Neurons) for layer in hidden_layers]
 
         for x, _ in examples:
             inputs = [Value(v) for v in x]
