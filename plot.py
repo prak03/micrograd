@@ -61,4 +61,4 @@ def plot_results(train_losses, predict, baseline=None, x2=1.0,
     fig.tight_layout()
     fig.savefig(path, dpi=150)
     print(f"saved {path}")
-    plt.show()
+    plt.close(fig)
